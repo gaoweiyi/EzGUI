@@ -12,7 +12,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import com.inputabc.EzGUIFramework.listener.ListenerBinder;
 import com.inputabc.EzGUIFramework.util.alias.Ez;
-
+/**
+* 给组件绑定监听器示例
+*/
 public class Test {
 	static ListenerBinder binder;
 
