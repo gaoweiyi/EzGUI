@@ -19,7 +19,7 @@ public class Test {
 	static ListenerBinder binder;
 
 	public static void main(String[] args) {
-		Ez.setTheme(Ez.THEME_OS_DEFAULT);
+		Ez.setTheme(Ez.THEME_OS_DEFAULT);//设置程序界面的皮肤
 		JFrame jf = new JFrame();
 		JPanel jp = new JPanel();
 		JButton jb = new JButton();
@@ -37,10 +37,10 @@ public class Test {
 		jf.setSize(200, 100);
 		jf.setLocationRelativeTo(null);
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		Ez.removeButtonDottedLine(jf);
+		Ez.removeButtonDottedLine(jf);//去除按钮虚线
 		jf.setVisible(true);
-		// 获取监听器绑定器对象
-		binder = Ez.getListenerBinder(new Events());
+		
+		binder = Ez.getListenerBinder(new Events());// 获取监听器绑定器对象
 
 		// 给"点我"按钮绑定一个事件监听器，活动方法为Events对象的hello方法
 		binder.actionPerformed(jb, "hello", "高伟益", "123456", "13512311111");
