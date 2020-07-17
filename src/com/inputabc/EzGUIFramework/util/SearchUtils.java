@@ -8,26 +8,30 @@ import java.util.List;
 import java.util.Set;
 
 import com.inputabc.EzGUIFramework.util.alias.Ez;
+
 /**
  * 搜索组件的工具类
+ * 
  * @author 高伟益
  * @version 1.2
  */
 public class SearchUtils {
-	private SearchUtils(){}
+	private SearchUtils() {
+	}
+
 	/**
 	 * 获取容器内组件名包含name的组件<br>
 	 * 可选右模糊、左模糊、左右模糊
 	 * 
 	 * @param c
 	 * @param name
-	 * @param matchType
-	 *            可选MATCH_LIKE_RIGHT、MATCH_LIKE_LEFT、MATCH_LIKE_BOTH
+	 * @param matchType     可选MATCH_LIKE_RIGHT、MATCH_LIKE_LEFT、MATCH_LIKE_BOTH
 	 * @param temporaryList 临时的集合
 	 * @return
 	 * @since 1.6
 	 */
-	public static Collection<Component> getComponentsByNameLike(Container c, String name, int matchType,List<Component> temporaryList) {
+	public static Collection<Component> getComponentsByNameLike(Container c, String name, int matchType,
+			List<Component> temporaryList) {
 		String srcComName = name;
 		if (name == null) {
 			srcComName = "null";
@@ -46,7 +50,7 @@ public class SearchUtils {
 				temporaryList.add(component);
 			}
 			if (component instanceof Container) {
-				getComponentsByNameLike((Container) component, srcComName, matchType,temporaryList);
+				getComponentsByNameLike((Container) component, srcComName, matchType, temporaryList);
 			}
 		}
 		if (temporaryList.size() == 0) {
@@ -56,17 +60,19 @@ public class SearchUtils {
 		components2.addAll(temporaryList);
 		return components2;
 	}
+
 	/**
 	 * 获取容器内组件名包含name的组件<br>
 	 * 该方法相当于getComponentsByNameLike(c, name, MATCH_LIKE_BOTH)
 	 * 
 	 * @param c
 	 * @param name
-	 * @param temporaryList 临时的集合 
+	 * @param temporaryList 临时的集合
 	 * @return
 	 * @since 1.6
 	 */
-	public static Collection<Component> getComponentsByNameEqual(Container c, String name,List<Component> temporaryList) {
+	public static Collection<Component> getComponentsByNameEqual(Container c, String name,
+			List<Component> temporaryList) {
 		String srcComName = name;
 		if (name == null) {
 			srcComName = "null";
@@ -81,38 +87,45 @@ public class SearchUtils {
 				temporaryList.add(component);
 			}
 			if (component instanceof Container) {
-				getComponentsByNameEqual((Container) component, srcComName,temporaryList);
+				getComponentsByNameEqual((Container) component, srcComName, temporaryList);
 			}
 		}
 		if (temporaryList.size() == 0) {
 			return null;
 		}
 		Collection<Component> components2 = new HashSet<Component>();
-		components2.addAll(temporaryList);		
+		components2.addAll(temporaryList);
 		return components2;
 	}
+
 	/**
 	 * 一层层地获取目标组件所在父组件中的名字为形参name的组件
+	 * 
 	 * @param c
 	 * @param name
 	 * @param temporarySet
 	 * @return
 	 * @since 1.8
 	 */
-	public static Component getComponentWithCrossParentByNameEqual(Component c, String name,Set<Component> temporarySet) {
+	public static Component getComponentWithCrossParentByNameEqual(Component c, String name,
+			Set<Component> temporarySet) {
 		if (name == null) {
 			return null;
 		}
 		Component targetComponent = null;
 		Container parent = c.getParent();
-		if(parent==null) {
+		if (parent == null) {
 			return null;
 		}
-		targetComponent = Ez.getComponentByNameEqual(parent, name);
-		if(targetComponent!=null){
+		if (name.equals(parent.getName())) {
 			temporarySet.add(targetComponent);
-		}else {
-			getComponentWithCrossParentByNameEqual(parent, name,temporarySet);
+			return parent;
+		}
+		targetComponent = Ez.getComponentByNameEqual(parent, name);
+		if (targetComponent != null) {
+			temporarySet.add(targetComponent);
+		} else {
+			getComponentWithCrossParentByNameEqual(parent, name, temporarySet);
 		}
 		return targetComponent;
 	}
