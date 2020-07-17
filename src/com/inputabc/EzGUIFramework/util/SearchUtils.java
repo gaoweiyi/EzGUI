@@ -7,6 +7,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 import com.inputabc.EzGUIFramework.util.alias.Ez;
 
 /**
@@ -118,7 +122,7 @@ public class SearchUtils {
 			return null;
 		}
 		if (name.equals(parent.getName())) {
-			temporarySet.add(targetComponent);
+			temporarySet.add(parent);
 			return parent;
 		}
 		targetComponent = Ez.getComponentByNameEqual(parent, name);
@@ -129,4 +133,5 @@ public class SearchUtils {
 		}
 		return targetComponent;
 	}
+	
 }

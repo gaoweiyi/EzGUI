@@ -1282,6 +1282,9 @@ public abstract class EzGUI {
 	 */
 	public static Component getComponentByNameEqual(Container c, String name) {
 		Collection<Component> componentsByName = getComponentsByNameEqual(c, name);
+		if(componentsByName==null||componentsByName.size()==0) {
+			return null;
+		}
 		return componentsByName.iterator().next();
 	}
 
