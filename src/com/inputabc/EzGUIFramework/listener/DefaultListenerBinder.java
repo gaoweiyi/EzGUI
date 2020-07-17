@@ -88,239 +88,12 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 		return parameterTypes;
 	}
 
-	public void componentHidden(final Component c, final String methodName) {
-		componentHidden(c, methodName, null);
-	}
-
 	@Override
-	public void componentShown(Component c, final String methodName) {
-		componentShown(c, methodName, null);
-	}
-
-	@Override
-	public void componentMoved(Component c, final String methodName) {
-		componentMoved(c, methodName, null);
-	}
-
-	@Override
-	public void componentResized(Component c, final String methodName) {
-		componentResized(c, methodName, null);
-	}
-
-	@Override
-	public void actionPerformed(Button btn, final String methodName) {
-		actionPerformed(btn, methodName, null);
-	}
-
-	@Override
-	public void actionPerformed(List l, final String methodName) {
-		actionPerformed(l, methodName, null);
-	}
-
-	@Override
-	public void actionPerformed(AbstractButton abtn, final String methodName) {
-		actionPerformed(abtn, methodName, null);
-	}
-
-	@SuppressWarnings("rawtypes")
-	@Override
-	public void actionPerformed(JComboBox jcb, final String methodName) {
-		actionPerformed(jcb, methodName, null);
-	}
-
-	@Override
-	public void actionPerformed(JFileChooser jfc, final String methodName) {
-		actionPerformed(jfc, methodName, null);
-	}
-
-	@Override
-	public void focusGained(Component c, final String methodName) {
-		focusGained(c, methodName, null);
-	}
-
-	@Override
-	public void focusLost(Component c, final String methodName) {
-		focusLost(c, methodName, null);
-	}
-
-	@Override
-	public void ancestorMoved(Component c, final String methodName) {
-		ancestorMoved(c, methodName, null);
-	}
-
-	@Override
-	public void ancestorResized(Component c, final String methodName) {
-		ancestorResized(c, methodName, null);
-	}
-
-	@Override
-	public void hierarchyChanged(Component c, final String methodName) {
-		hierarchyChanged(c, methodName, null);
-	}
-
-	@Override
-	public void inputMethodTextChanged(Component c, final String methodName) {
-		inputMethodTextChanged(c, methodName, null);
-	}
-
-	@Override
-	public void caretPositionChanged(Component c, final String methodName) {
-		caretPositionChanged(c, methodName, null);
-	}
-
-	@Override
-	public void keyTyped(Component c, final String methodName) {
-		keyTyped(c, methodName, null);
-	}
-
-	@Override
-	public void keyPressed(Component c, final String methodName) {
-		keyPressed(c, methodName, null);
-	}
-
-	@Override
-	public void keyReleased(Component c, final String methodName) {
-		keyReleased(c, methodName, null);
-	}
-
-	@Override
-	public void mouseClicked(Component c, final String methodName) {
-		mouseClicked(c, methodName, null);
-	}
-
-	@Override
-	public void mousePressed(Component c, final String methodName) {
-		mousePressed(c, methodName, null);
-	}
-
-	@Override
-	public void mouseReleased(Component c, final String methodName) {
-		mouseReleased(c, methodName, null);
-	}
-
-	@Override
-	public void mouseEntered(Component c, final String methodName) {
-		mouseEntered(c, methodName, null);
-	}
-
-	@Override
-	public void mouseExited(Component c, final String methodName) {
-		mouseExited(c, methodName, null);
-	}
-
-	@Override
-	public void mouseDragged(Component c, final String methodName) {
-		mouseDragged(c, methodName, null);
-	}
-
-	@Override
-	public void mouseMoved(Component c, final String methodName) {
-		mouseMoved(c, methodName, null);
-	}
-
-	@Override
-	public void mouseWheelMoved(Component c, final String methodName) {
-		mouseWheelMoved(c, methodName, null);
-	}
-
-	@Override
-	public void propertyChange(Component c, final String methodName) {
-		propertyChange(c, methodName, new Object[] {});
-	}
-
-	@Override
-	public void propertyChange(Component c, final String methodName, String propertyName) {
-		propertyChange(c, methodName, propertyName, null);
-	}
-
-	@Override
-	public void itemStateChanged(ItemSelectable is, final String methodName) {
-		itemStateChanged(is, methodName, null);
-	}
-
-	@Override
-	public void componentAdded(Container c, final String methodName) {
-		componentAdded(c, methodName, null);
-	}
-
-	@Override
-	public void componentRemoved(Container c, final String methodName) {
-		componentRemoved(c, methodName, null);
-	}
-
-	@Override
-	public void windowGainedFocus(Window w, final String methodName) {
-		windowGainedFocus(w, methodName, null);
-	}
-
-	@Override
-	public void windowLostFocus(Window w, final String methodName) {
-		windowLostFocus(w, methodName, null);
-	}
-
-	@Override
-	public void windowOpened(Window w, final String methodName) {
-		windowOpened(w, methodName, null);
-	}
-
-	@Override
-	public void windowClosing(Window w, final String methodName) {
-		windowClosing(w, methodName, null);
-	}
-
-	@Override
-	public void windowClosed(Window w, final String methodName) {
-		windowClosed(w, methodName, null);
-	}
-
-	@Override
-	public void windowIconified(Window w, final String methodName) {
-		windowIconified(w, methodName, null);
-	}
-
-	@Override
-	public void windowDeiconified(Window w, final String methodName) {
-		windowDeiconified(w, methodName, null);
-	}
-
-	@Override
-	public void windowActivated(Window w, final String methodName) {
-		windowActivated(w, methodName, null);
-	}
-
-	@Override
-	public void windowDeactivated(Window w, final String methodName) {
-		windowDeactivated(w, methodName, null);
-	}
-
-	@Override
-	public void windowStateChanged(Window w, final String methodName) {
-		windowStateChanged(w, methodName, null);
-	}
-
-	@Override
-	public void adjustmentValueChanged(Adjustable a, final String methodName) {
-		adjustmentValueChanged(a, methodName, null);
-	}
-
-	@Override
-	public void textValueChanged(TextComponent tc, final String methodName) {
-		textValueChanged(tc, methodName, null);
-	}
-
-	@Override
-	public void stateChanged(ButtonModel bm, final String methodName) {
-		stateChanged(bm, methodName, null);
-	}
-
-	/**************** 带有额外参数的 *************/
-
-	@Override
-	public void componentHidden(Component c, final String methodName, final Object[] args) {
+	public void componentHidden(Component c, final String methodName, final Object... args) {
 		ComponentListener cl = new ComponentAdapter() {
 			@Override
 			public void componentHidden(ComponentEvent e) {
-				parameterTypes = parameterTypes = action(actionObj, methodName, e, args);
+				parameterTypes = action(actionObj, methodName, e, args);
 			}
 		};
 		c.addComponentListener(cl);
@@ -328,11 +101,11 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void componentShown(Component c, final String methodName, final Object[] args) {
+	public void componentShown(Component c, final String methodName, final Object... args) {
 		ComponentListener cl = new ComponentAdapter() {
 			@Override
 			public void componentShown(ComponentEvent e) {
-				parameterTypes = parameterTypes = action(actionObj, methodName, e, args);
+				parameterTypes = action(actionObj, methodName, e, args);
 			}
 		};
 		c.addComponentListener(cl);
@@ -340,11 +113,11 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void componentMoved(Component c, final String methodName, final Object[] args) {
+	public void componentMoved(Component c, final String methodName, final Object... args) {
 		ComponentListener cl = new ComponentAdapter() {
 			@Override
 			public void componentMoved(ComponentEvent e) {
-				parameterTypes = parameterTypes = action(actionObj, methodName, e, args);
+				 parameterTypes = action(actionObj, methodName, e, args);
 			}
 		};
 		c.addComponentListener(cl);
@@ -352,11 +125,11 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void componentResized(Component c, final String methodName, final Object[] args) {
+	public void componentResized(Component c, final String methodName, final Object... args) {
 		ComponentListener cl = new ComponentAdapter() {
 			@Override
 			public void componentResized(ComponentEvent e) {
-				parameterTypes = parameterTypes = action(actionObj, methodName, e, args);
+				 parameterTypes = action(actionObj, methodName, e, args);
 			}
 		};
 		c.addComponentListener(cl);
@@ -364,12 +137,12 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void actionPerformed(Button btn, final String methodName, final Object[] args) {
+	public void actionPerformed(Button btn, final String methodName, final Object... args) {
 		ActionListener al = new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				parameterTypes = parameterTypes = action(actionObj, methodName, e, args);
+				 parameterTypes = action(actionObj, methodName, e, args);
 			}
 		};
 		btn.addActionListener(al);
@@ -377,12 +150,12 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void actionPerformed(List l, final String methodName, final Object[] args) {
+	public void actionPerformed(List l, final String methodName, final Object... args) {
 		ActionListener al = new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				parameterTypes = parameterTypes = action(actionObj, methodName, e, args);
+				 parameterTypes = action(actionObj, methodName, e, args);
 			}
 		};
 		l.addActionListener(al);
@@ -390,7 +163,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void actionPerformed(AbstractButton abtn, final String methodName, final Object[] args) {
+	public void actionPerformed(AbstractButton abtn, final String methodName, final Object... args) {
 		ActionListener al = new ActionListener() {
 
 			@Override
@@ -404,7 +177,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 
 	@SuppressWarnings("rawtypes")
 	@Override
-	public void actionPerformed(JComboBox jcb, final String methodName, final Object[] args) {
+	public void actionPerformed(JComboBox jcb, final String methodName, final Object... args) {
 		ActionListener al = new ActionListener() {
 
 			@Override
@@ -417,7 +190,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void actionPerformed(JFileChooser jfc, final String methodName, final Object[] args) {
+	public void actionPerformed(JFileChooser jfc, final String methodName, final Object... args) {
 		ActionListener al = new ActionListener() {
 
 			@Override
@@ -430,7 +203,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void focusGained(Component c, final String methodName, final Object[] args) {
+	public void focusGained(Component c, final String methodName, final Object... args) {
 		FocusAdapter fa = new FocusAdapter() {
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -442,7 +215,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void focusLost(Component c, final String methodName, final Object[] args) {
+	public void focusLost(Component c, final String methodName, final Object... args) {
 		FocusAdapter fa = new FocusAdapter() {
 			@Override
 			public void focusLost(FocusEvent e) {
@@ -454,7 +227,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void ancestorMoved(Component c, final String methodName, final Object[] args) {
+	public void ancestorMoved(Component c, final String methodName, final Object... args) {
 		HierarchyBoundsAdapter hba = new HierarchyBoundsAdapter() {
 			@Override
 			public void ancestorMoved(HierarchyEvent e) {
@@ -466,7 +239,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void ancestorResized(Component c, final String methodName, final Object[] args) {
+	public void ancestorResized(Component c, final String methodName, final Object... args) {
 		HierarchyBoundsAdapter hba = new HierarchyBoundsAdapter() {
 			@Override
 			public void ancestorResized(HierarchyEvent e) {
@@ -478,7 +251,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void hierarchyChanged(Component c, final String methodName, final Object[] args) {
+	public void hierarchyChanged(Component c, final String methodName, final Object... args) {
 		HierarchyListener hl = new HierarchyListener() {
 
 			@Override
@@ -491,7 +264,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void inputMethodTextChanged(Component c, final String methodName, final Object[] args) {
+	public void inputMethodTextChanged(Component c, final String methodName, final Object... args) {
 		InputMethodListener iml = new InputMethodListener() {
 
 			@Override
@@ -508,7 +281,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void caretPositionChanged(Component c, final String methodName, final Object[] args) {
+	public void caretPositionChanged(Component c, final String methodName, final Object... args) {
 		InputMethodListener iml = new InputMethodListener() {
 
 			@Override
@@ -525,7 +298,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void keyTyped(Component c, final String methodName, final Object[] args) {
+	public void keyTyped(Component c, final String methodName, final Object... args) {
 		KeyAdapter ka = new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
@@ -537,7 +310,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void keyPressed(Component c, final String methodName, final Object[] args) {
+	public void keyPressed(Component c, final String methodName, final Object... args) {
 		KeyAdapter ka = new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
@@ -549,7 +322,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void keyReleased(Component c, final String methodName, final Object[] args) {
+	public void keyReleased(Component c, final String methodName, final Object... args) {
 		KeyAdapter ka = new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent e) {
@@ -561,7 +334,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void mouseClicked(Component c, final String methodName, final Object[] args) {
+	public void mouseClicked(Component c, final String methodName, final Object... args) {
 		MouseAdapter ma = new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -573,7 +346,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void mousePressed(Component c, final String methodName, final Object[] args) {
+	public void mousePressed(Component c, final String methodName, final Object... args) {
 		MouseAdapter ma = new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -585,7 +358,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void mouseReleased(Component c, final String methodName, final Object[] args) {
+	public void mouseReleased(Component c, final String methodName, final Object... args) {
 		MouseAdapter ma = new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent e) {
@@ -597,7 +370,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void mouseEntered(Component c, final String methodName, final Object[] args) {
+	public void mouseEntered(Component c, final String methodName, final Object... args) {
 		MouseAdapter ma = new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
@@ -609,7 +382,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void mouseExited(Component c, final String methodName, final Object[] args) {
+	public void mouseExited(Component c, final String methodName, final Object... args) {
 		MouseAdapter ma = new MouseAdapter() {
 			@Override
 			public void mouseExited(MouseEvent e) {
@@ -621,7 +394,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void mouseDragged(Component c, final String methodName, final Object[] args) {
+	public void mouseDragged(Component c, final String methodName, final Object... args) {
 		MouseMotionAdapter mma = new MouseMotionAdapter() {
 			@Override
 			public void mouseDragged(MouseEvent e) {
@@ -633,7 +406,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void mouseMoved(Component c, final String methodName, final Object[] args) {
+	public void mouseMoved(Component c, final String methodName, final Object... args) {
 		MouseMotionAdapter mma = new MouseMotionAdapter() {
 			@Override
 			public void mouseMoved(MouseEvent e) {
@@ -645,7 +418,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void mouseWheelMoved(Component c, final String methodName, final Object[] args) {
+	public void mouseWheelMoved(Component c, final String methodName, final Object... args) {
 		MouseWheelListener mwl = new MouseWheelListener() {
 
 			@Override
@@ -658,7 +431,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void propertyChange(Component c, final String methodName, final Object[] args) {
+	public void propertyChange(Component c, final String methodName, final Object... args) {
 		PropertyChangeListener pcl = new PropertyChangeListener() {
 
 			@Override
@@ -671,7 +444,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void propertyChange(Component c, final String methodName, String propertyName, final Object[] args) {
+	public void propertyChange(Component c, final String methodName, String propertyName, final Object... args) {
 		PropertyChangeListener pcl = new PropertyChangeListener() {
 
 			@Override
@@ -684,7 +457,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void itemStateChanged(ItemSelectable is, final String methodName, final Object[] args) {
+	public void itemStateChanged(ItemSelectable is, final String methodName, final Object... args) {
 		ItemListener il = new ItemListener() {
 
 			@Override
@@ -697,7 +470,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void componentAdded(Container c, final String methodName, final Object[] args) {
+	public void componentAdded(Container c, final String methodName, final Object... args) {
 		ContainerListener cl = new ContainerListener() {
 
 			@Override
@@ -714,7 +487,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void componentRemoved(Container c, final String methodName, final Object[] args) {
+	public void componentRemoved(Container c, final String methodName, final Object... args) {
 		ContainerListener cl = new ContainerListener() {
 
 			@Override
@@ -731,7 +504,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void windowGainedFocus(Window w, final String methodName, final Object[] args) {
+	public void windowGainedFocus(Window w, final String methodName, final Object... args) {
 		WindowFocusListener wfl = new WindowFocusListener() {
 
 			@Override
@@ -748,7 +521,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void windowLostFocus(Window w, final String methodName, final Object[] args) {
+	public void windowLostFocus(Window w, final String methodName, final Object... args) {
 		WindowFocusListener wfl = new WindowFocusListener() {
 
 			@Override
@@ -765,7 +538,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void windowOpened(Window w, final String methodName, final Object[] args) {
+	public void windowOpened(Window w, final String methodName, final Object... args) {
 		WindowAdapter wa = new WindowAdapter() {
 			@Override
 			public void windowOpened(WindowEvent e) {
@@ -777,7 +550,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void windowClosing(Window w, final String methodName, final Object[] args) {
+	public void windowClosing(Window w, final String methodName, final Object... args) {
 		WindowAdapter wa = new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
@@ -789,7 +562,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void windowClosed(Window w, final String methodName, final Object[] args) {
+	public void windowClosed(Window w, final String methodName, final Object... args) {
 		WindowAdapter wa = new WindowAdapter() {
 			@Override
 			public void windowClosed(WindowEvent e) {
@@ -801,7 +574,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void windowIconified(Window w, final String methodName, final Object[] args) {
+	public void windowIconified(Window w, final String methodName, final Object... args) {
 		WindowAdapter wa = new WindowAdapter() {
 			@Override
 			public void windowIconified(WindowEvent e) {
@@ -813,7 +586,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void windowDeiconified(Window w, final String methodName, final Object[] args) {
+	public void windowDeiconified(Window w, final String methodName, final Object... args) {
 		WindowAdapter wa = new WindowAdapter() {
 			@Override
 			public void windowDeiconified(WindowEvent e) {
@@ -825,7 +598,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void windowActivated(Window w, final String methodName, final Object[] args) {
+	public void windowActivated(Window w, final String methodName, final Object... args) {
 		WindowAdapter wa = new WindowAdapter() {
 			@Override
 			public void windowActivated(WindowEvent e) {
@@ -837,7 +610,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void windowDeactivated(Window w, final String methodName, final Object[] args) {
+	public void windowDeactivated(Window w, final String methodName, final Object... args) {
 		WindowAdapter wa = new WindowAdapter() {
 			@Override
 			public void windowDeactivated(WindowEvent e) {
@@ -849,7 +622,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void windowStateChanged(Window w, final String methodName, final Object[] args) {
+	public void windowStateChanged(Window w, final String methodName, final Object... args) {
 		WindowStateListener wsl = new WindowStateListener() {
 
 			@Override
@@ -862,7 +635,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void adjustmentValueChanged(Adjustable a, final String methodName, final Object[] args) {
+	public void adjustmentValueChanged(Adjustable a, final String methodName, final Object... args) {
 		AdjustmentListener al = new AdjustmentListener() {
 
 			@Override
@@ -876,7 +649,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void textValueChanged(TextComponent tc, final String methodName, final Object[] args) {
+	public void textValueChanged(TextComponent tc, final String methodName, final Object... args) {
 		TextListener tl = new TextListener() {
 
 			@Override
@@ -889,7 +662,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 	}
 
 	@Override
-	public void stateChanged(ButtonModel bm, final String methodName, final Object[] args) {
+	public void stateChanged(ButtonModel bm, final String methodName, final Object... args) {
 		ChangeListener cl = new ChangeListener() {
 
 			@Override

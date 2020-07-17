@@ -5,10 +5,13 @@ import java.awt.Container;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
+import com.inputabc.EzGUIFramework.util.alias.Ez;
 /**
  * 搜索组件的工具类
  * @author 高伟益
- * @version 1.1
+ * @version 1.2
  */
 public class SearchUtils {
 	private SearchUtils(){}
@@ -87,5 +90,30 @@ public class SearchUtils {
 		Collection<Component> components2 = new HashSet<Component>();
 		components2.addAll(temporaryList);		
 		return components2;
+	}
+	/**
+	 * 一层层地获取目标组件所在父组件中的名字为形参name的组件
+	 * @param c
+	 * @param name
+	 * @param temporarySet
+	 * @return
+	 * @since 1.8
+	 */
+	public static Component getComponentWithCrossParentByNameEqual(Component c, String name,Set<Component> temporarySet) {
+		if (name == null) {
+			return null;
+		}
+		Component targetComponent = null;
+		Container parent = c.getParent();
+		if(parent==null) {
+			return null;
+		}
+		targetComponent = Ez.getComponentByNameEqual(parent, name);
+		if(targetComponent!=null){
+			temporarySet.add(targetComponent);
+		}else {
+			getComponentWithCrossParentByNameEqual(parent, name,temporarySet);
+		}
+		return targetComponent;
 	}
 }
