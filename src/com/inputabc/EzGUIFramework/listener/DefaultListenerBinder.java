@@ -734,7 +734,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 									Class<?>[] parameterTypes = cm.getParameterTypes();
 									for (Class<?> class1 : parameterTypes) {
 										try {
-											if(class1.newInstance() instanceof EventListener){
+											if(EventListener.class.isAssignableFrom(class1)){
 												Method[] eventListenerMethods = class1.getMethods();
 												for (Method method : eventListenerMethods) {
 													if(method.getName().equals(info.getListenerMethod())){
@@ -783,7 +783,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 								Class<?>[] parameterTypes = cm.getParameterTypes();
 								for (Class<?> class1 : parameterTypes) {
 									try {
-										if(class1.newInstance() instanceof EventListener){
+										if(EventListener.class.isAssignableFrom(class1)){
 											Method[] eventListenerMethods = class1.getMethods();
 											for (Method method : eventListenerMethods) {
 												if(method.getName().equals(info.getListenerMethod())){
@@ -820,7 +820,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 								Class<?>[] parameterTypes = cm.getParameterTypes();
 								for (Class<?> class1 : parameterTypes) {
 									try {
-										if(class1.newInstance() instanceof EventListener){
+										if(EventListener.class.isAssignableFrom(class1)){
 											Method[] eventListenerMethods = class1.getMethods();
 											for (Method method : eventListenerMethods) {
 												if(method.getName().equals(info.getListenerMethod())){
@@ -856,7 +856,7 @@ public class DefaultListenerBinder extends AbstractListenerBinder {
 								Class<?>[] parameterTypes = cm.getParameterTypes();
 								for (Class<?> class1 : parameterTypes) {
 									try {
-										if(class1.newInstance() instanceof EventListener){
+										if(EventListener.class.isAssignableFrom(class1)){
 											Method[] eventListenerMethods = class1.getMethods();
 											for (Method method : eventListenerMethods) {
 												if(method.getName().equals(info.getListenerMethod())){

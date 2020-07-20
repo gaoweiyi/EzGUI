@@ -78,8 +78,8 @@ import net.sf.cglib.proxy.MethodProxy;
  * ------------EzGUI------------ 适合Swing和AWT
  * 
  * @author 高伟益
- * @date 2020/7/17
- * @version 1.8 debug3 适合java1.6以上的jdk
+ * @date 2020/7/20
+ * @version 1.8 debug4 适合java1.6以上的jdk
  *          EzGUI建议开发GUI的时候为每个组件设置一个名字，方便利用本框架中的debug方法进行调试。
  */
 public abstract class EzGUI {
